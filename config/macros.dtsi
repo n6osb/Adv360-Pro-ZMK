@@ -1,3 +1,9 @@
+macro_three: macro_three{
+compatible = "zmk,behavior-macro";
+label = "macro_three";
+#binding-cells = <0>;
+bindings = <&kp LCTRL>, <&kp LALT>, <&kp NUMBER_3>;
+};
 macro_two: macro_two{
 compatible = "zmk,behavior-macro";
 label = "macro_two";
