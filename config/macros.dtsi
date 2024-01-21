@@ -1,3 +1,9 @@
+macro_semic: macro_semic{
+compatible = "zmk,behavior-macro";
+label = "macro_semic";
+#binding-cells = <0>;
+bindings = <&kp LSHFT>, <&kp LCTRL>, <&kp LALT>, <&kp SEMICOLON>;
+};
 macro_l: macro_l{
 compatible = "zmk,behavior-macro";
 label = "macro_l";
