@@ -44,7 +44,7 @@
    &kp TAB      &kp Q   &kp W     &kp E      &kp R   &kp T             &macro_one                                                                &kp F13   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
    &kp ESC      &kp A   &kp S     &kp D      &kp F   &kp G            &macro_test  &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL  &kp INSERT   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
  &kp LSHFT      &kp Z   &kp X     &kp C      &kp V   &kp B                                    &kp HOME                  &kp PG_UP                          &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-     &mo 2  &kp GRAVE  &trans  &kp LEFT  &kp RIGHT                       &kp BSPC    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER   &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT      &mo 2
+     &mo 2  &kp GRAVE   &none  &kp LEFT  &kp RIGHT                       &kp BSPC    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER   &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT      &mo 2
             >;
         };
 
@@ -60,25 +60,35 @@
 
         layer_fn {
             bindings = <
- &kp F1  &kp F2           &kp F3  &kp F4  &kp F5  &kp F6            &tog 1                                                                                    &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &trans           &trans  &trans  &trans  &trans             &none                                                                                    &none  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans  &kp PRINTSCREEN  &trans  &trans  &trans             &none  &trans  &trans                       &kp C_REWIND  &kp C_FAST_FORWARD             &none  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans           &trans  &trans  &trans  &trans                            &trans                    &kp C_VOLUME_UP                                        &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans         &kp CAPS  &trans  &trans                    &trans  &trans  &trans                  &kp C_VOLUME_DOWN          &kp K_MUTE  &kp K_PLAY_PAUSE          &trans  &trans   &trans   &trans   &trans
+ &kp F1  &kp F2           &kp F3  &kp F4  &kp F5  &kp F6            &tog 1                                                                               &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+ &trans  &trans           &trans  &trans  &trans  &trans             &none                                                                               &none  &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &kp PRINTSCREEN  &trans  &trans  &trans             &none  &trans  &trans                  &kp C_REWIND  &kp C_FAST_FORWARD             &none  &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  &trans           &trans  &trans  &trans  &trans                            &trans                  &kp K_VOL_UP                                        &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  &trans         &kp CAPS  &trans  &trans                    &trans  &trans  &trans                  &kp K_VOL_DN          &kp K_MUTE  &kp K_PLAY_PAUSE          &trans  &trans   &trans   &trans   &trans
             >;
         };
 
         layer_mod {
             bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none     &none         &none   &none
-  &none         &none         &none             &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none     &none         &none   &none
-  &none      &macro_a      &macro_s          &macro_d      &macro_f         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none    &macro_j    &macro_k  &macro_l  &macro_semic   &none
-  &none         &none         &none  &kp K_CALCULATOR    &macro_ver      &macro_b                                  &none                       &none                                       &none       &none       &none     &none         &none   &none
-  &none         &none         &none             &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC     &none         &none   &none
+  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none     &none         &none   &none
+  &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none     &none         &none   &none
+  &none      &macro_a      &macro_s      &macro_d      &macro_f         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none    &macro_j    &macro_k  &macro_l  &macro_semic   &none
+  &none         &none         &none    &kp K_CALC    &macro_ver         &none                                  &none                       &none                                       &none       &none       &none     &none         &none   &none
+  &none         &none         &none         &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC     &none         &none   &none
             >;
         };
 
         layer_Layer__4 {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_Layer__5 {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
